@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { IBook } from '../books.model';
 
 @Component({
-  selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })

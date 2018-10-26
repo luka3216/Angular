@@ -1,4 +1,4 @@
-<form class="bg-white p-3" [formGroup]="bookFormService.form">
+<form class="bg-white p-3" [formGroup]="bookFormService">
   <div class="form-group">
     <label>Title</label>
     <input [formControlName]="'title'"
@@ -19,7 +19,7 @@
       [class.is-invalid]="bookFormService.isInvalid('shortDescription')"
       placeholder="Enter email">
     <div class="invalid-feedback" *ngFor="let error of bookFormService.getErrors('shortDescription')">
-      {{error | json}}
+      {{error | customPipe}}
     </div>
   </div>
   <div class="form-group">

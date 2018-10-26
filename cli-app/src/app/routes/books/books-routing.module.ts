@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListComponent } from './list/list.component';
 import { BooksComponent } from './books.component';
-import { BookComponent } from './book/book.component';
 
 const routes: Routes = [{
   path: '',
@@ -24,7 +23,7 @@ const routes: Routes = [{
 }];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class BooksRoutingModule { }
