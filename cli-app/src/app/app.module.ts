@@ -11,12 +11,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([{
       path: '',
-      redirectTo: 'books'
+      redirectTo: 'books',
+      pathMatch: 'full'
     }, {
       path: 'books',
-      loadChildren: './routes/books/books.module#BooksModle'
+      loadChildren: './routes/books/books.module#BooksModule'
     }])
   ],
   providers: [],
